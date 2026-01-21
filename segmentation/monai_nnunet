@@ -1,3 +1,6 @@
+#Monai documents for applications:
+https://monai-dev.readthedocs.io/en/stable/apps.html
+
 # Ubuntu
 cd /media/zhang/UBUNTU/data/dl_data/
 
@@ -12,3 +15,12 @@ python -m monai.apps.nnunet nnUNetV2Runner train_single_model --input_config "./
     --config "3d_fullres" \
     --fold 0 \
     --trainer_class_name "nnUNetTrainer_5epochs"
+
+# Use all available GPU(s) to train five models under the 3d_fullres configuration
+python -m monai.apps.nnunet nnUNetV2Runner train_single_model --input_config "./input.yaml" \
+    --config "3d_fullres" \
+    --trainer_class_name "nnUNetTrainer_5epochs"
+
+## [component] use all available GPU(s) to train all 20 models (4 configurations, five folders each)
+python -m monai.apps.nnunet nnUNetV2Runner train --input_config "./input.yaml" \
+    --trainer_class_name "nnUNetTrainer_20epochs"
