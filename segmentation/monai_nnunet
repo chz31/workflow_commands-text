@@ -19,7 +19,7 @@ python -m monai.apps.nnunet nnUNetV2Runner train_single_model --input_config "./
 # Use all available GPU(s) to train five models under the 3d_fullres configuration
 python -m monai.apps.nnunet nnUNetV2Runner train_single_model --input_config "./input.yaml" \
     --config "3d_fullres" \
-    --trainer_class_name "nnUNetTrainer_5epochs"
+    --trainer_class_name "nnUNetTrainer_2000epochs"
 
 ## [component] use all available GPU(s) to train all 20 models (4 configurations, five folders each)
 python -m monai.apps.nnunet nnUNetV2Runner train --input_config "./input.yaml" \
