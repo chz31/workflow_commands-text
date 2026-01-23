@@ -21,6 +21,15 @@ python -m monai.apps.nnunet nnUNetV2Runner train_single_model --input_config "./
     --config "3d_fullres" \
     --trainer_class_name "nnUNetTrainer_2000epochs"
 
+for f in 0 1 2 3 4; do
+  python -m monai.apps.nnunet nnUNetV2Runner train_single_model \
+    --input_config "./input.yaml" \
+    --config "3d_fullres" \
+    --fold $f \
+    --trainer_class_name "nnUNetTrainer_2000epochs"
+done
+
+
 ## [component] use all available GPU(s) to train all 20 models (4 configurations, five folders each)
 python -m monai.apps.nnunet nnUNetV2Runner train --input_config "./input.yaml" \
     --trainer_class_name "nnUNetTrainer_20epochs"
