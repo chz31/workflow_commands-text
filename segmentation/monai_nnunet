@@ -20,6 +20,19 @@ python -m monai.apps.nnunet nnUNetV2Runner train_single_model --input_config "./
 python -m monai.apps.nnunet nnUNetV2Runner train_single_model --input_config "./input.yaml" \
     --config "3d_fullres" \
     --trainer_class_name "nnUNetTrainer_2000epochs"
+#The above showed error of input gpu ids
+
+#Below one appeared tp wprl
+for f in 0 1 2 3 4; do
+  python -m monai.apps.nnunet nnUNetV2Runner train_single_model \
+    --input_config "./input.yaml" \
+    --config "3d_fullres" \
+    --fold $f \
+    --trainer_class_name "nnUNetTrainer_2000epochs"
+done
+
+
+Add ; before done (or put done on a new line) to avoid shell parsing issues in some terminals:
 
 for f in 0 1 2 3 4; do
   python -m monai.apps.nnunet nnUNetV2Runner train_single_model \
