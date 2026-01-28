@@ -7,3 +7,11 @@
 cd ~/Downloads/SofaPython3-26_01_add_cgal_example_ugin_python_lib/examples/CGAL
 
 python mesh_from_polyhedron.py -c "facet_angle=25 edge_size=4 facet_size=3 facet_distance=0.1 cell_radius_edge_ration=5" -r Lloyd
+
+**Run simulation for ten steps and print out time each step took for debugging**
+#export ten steps
+export SOFA_TIMER_ALL=10
+
+#Specify how many steps a sofa scene will run to print out results
+./runSofa /home/chi/Documents/slicersofa_sofa_scratches/test_roi_select.py -g batch -n 11 
+
