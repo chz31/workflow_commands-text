@@ -27,3 +27,4 @@ export SOFA_TIMER_ALL=10
 #Specify how many steps a sofa scene will run to print out results for n=11 steps
 ./runSofa /home/chi/Documents/slicersofa_sofa_scratches/test_roi_select.py -g batch -n 11 
 
+Youngs modulus (pa) calculated from time, mass (SI unit: kg), and size. If in mm, it will be converted to kpa.
