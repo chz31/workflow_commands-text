@@ -48,10 +48,17 @@ Main objective: reproducibility & scalability over absolute accuracey
 1. Streamline simulation by integrating Slicer & SOFA for specific-task simulation rather than full surgical process: only simulate a key step for one scene
 2. How accurate is acceptable for a specific tasks
 
-Aim 1: Automate mechanical model prep from images for specific tasks.
-Aim 2: Soft tissue retraction + eyeball position after plate installation
-Aim 3: plate bending using shell model (easier to validate)
-Aim 4: validation using gel phantom and postsurgical images.
+Aims
+1. Automate mechanical model prep from images for specific tasks.
+2. Soft tissue retraction + eyeball position after plate installation
+3. plate bending using shell model (easier to validate)
+4. Validation using gel phantom and postsurgical images.
+
+Using the gel phantom to validate simulation can be refactored into a separate aim. Add sensors to the scoop to measure the scoop pressure.
+
+Clarify that the purpose is to make the tool available for people to try and do research; no claim about clinical vallidation or clinical use.
+
+Can plate bending be refactored into a separate grant application?
 
 
 
