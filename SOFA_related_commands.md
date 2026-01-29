@@ -39,3 +39,19 @@ PYTHONPATH=/home/chi/Downloads/SOFA_v25.12.99-full_Linux/SOFA_v25.12.99_Linux/pl
 /home/chi/Downloads/SOFA_v25.12.99-full_Linux/SOFA_v25.12.99_Linux/bin/runSofa-25.12.99 -l SofaPython3 -g qglviewer \
 /home/chi/Documents/slicersofa_sofa_scratches/test_roi_select.py
 ```
+
+
+
+Problem: previous simulation in OMFS seeks accuracy in model preparation and simulation, but less scalable and reproducible --> became training moduels. Not integrated into routine virtual planning.
+
+Main objective: reproducibility & scalability over absolute accuracey
+1. Streamline simulation by integrating Slicer & SOFA for specific-task simulation rather than full surgical process: only simulate a key step for one scene
+2. How accurate is acceptable for a specific tasks
+
+Aim 1: Automate mechanical model prep from images for specific tasks.
+Aim 2: Soft tissue retraction + eyeball position after plate installation
+Aim 3: plate bending using shell model (easier to validate)
+Aim 4: validation using gel phantom and postsurgical images.
+
+
+
