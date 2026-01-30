@@ -2,6 +2,8 @@
 
 **Run the cgal helper to generate a mesh from obj**
 
+https://github.com/bakpaul/SofaPython3/blob/26_01_add_cgal_example_ugin_python_lib/examples/CGAL/mesh_from_polyhedron.py
+
 #Download zip here: https://github.com/bakpaul/SofaPython3/tree/26_01_add_cgal_example_ugin_python_lib
 
 `cd ~/Downloads/SofaPython3-26_01_add_cgal_example_ugin_python_lib/examples/CGAL`
@@ -32,7 +34,7 @@ or shutdown export using:
 
 Youngs modulus (pa) calculated from time, mass (SI unit: kg), and size. If in mm, it will be converted to kpa.
 
-Initializing SOFA beta version without permanent change sofapython3 paths:
+Initializing SOFA v25.12 beta version without permanent change sofapython3 paths:
 ```
 SOFA_ROOT=/home/chi/Downloads/SOFA_v25.12.99-full_Linux/SOFA_v25.12.99_Linux \
 PYTHONPATH=/home/chi/Downloads/SOFA_v25.12.99-full_Linux/SOFA_v25.12.99_Linux/plugins/SofaPython3/lib/python3/site-packages:$PYTHONPATH \
@@ -62,3 +64,12 @@ Can plate bending be refactored into a separate grant application?
 
 
 
+Example of MeshROI select: https://github.com/sofa-framework/sofa/blob/master/examples/Component/Engine/Select/MeshROI.scn
+
+Example of LinearMovementProjectConstraint: /home/chi/SOFA/v25.06.00/share/sofa/examples/Component/Constraint/Projective/LinearMovementProjectiveConstraint.scn
+- Export three positions: beginning, under the eye, end of push.
+- Interpolation of the tool
+
+Multimaterial model/heterogeneous: https://github.com/sofa-framework/sofa/blob/master/examples/Component/SolidMechanics/FEM/Heterogeneous-TetrahedronFEMForceField.scn
+
+Pieper examples: https://github.com/pieper/SlicerSOFA/blob/main/Experiments/prostate.py
