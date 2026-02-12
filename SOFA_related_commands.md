@@ -2,13 +2,27 @@
 
 **Run the cgal helper to generate a mesh from obj**
 
-https://github.com/bakpaul/SofaPython3/blob/26_01_add_cgal_example_ugin_python_lib/examples/CGAL/mesh_from_polyhedron.py
+https://github.com/bakpaul/SofaPython3/blob/26_01_add_cgal_example_ugin_python_lib/examples/meshing/CGAL/mesh_from_polyhedron.py
 
 #Download zip here: https://github.com/bakpaul/SofaPython3/tree/26_01_add_cgal_example_ugin_python_lib
 
-`cd ~/Downloads/SofaPython3-26_01_add_cgal_example_ugin_python_lib/examples/CGAL`
+`cd ~/Documents/SofaPython3-26_01_add_cgal_example_ugin_python_lib/examples/meshing/CGAL`
 
-`python mesh_from_polyhedron.py -c "facet_angle=25 edge_size=4 facet_size=3 facet_distance=0.1 cell_radius_edge_ration=5" -r Lloyd`
+Install required packages
+```
+pip install pandas
+pip install vtk
+pip install cgal
+```
+
+```
+python mesh_from_polyhedron.py -i "/home/zhang/Documents/mesh_select/orbital_tissue_down_2.obj" \
+                               -o "/home/zhang/Documents/mesh_select/orbitalVol2.vtk" \
+                               -c "facet_angle=25 edge_size=4 facet_size=3 facet_distance=0.1 cell_radius_edge_ration=5" \
+                               -r "Lloyd"
+```
+
+Around 10,000 tetrahedrons would be nice.
 
 
 
