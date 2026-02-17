@@ -1,28 +1,37 @@
-#Monai documents for applications:
+## Monai documents for applications:
 https://monai-dev.readthedocs.io/en/stable/apps.html
 
-# Ubuntu
-cd /media/zhang/UBUNTU/data/dl_data/
+## Ubuntu
+`cd /media/zhang/UBUNTU/data/dl_data/`
 
+```
 # [component] convert dataset; makes data readable
 python -m monai.apps.nnunet nnUNetV2Runner convert_dataset --input_config "./input.yaml"
+```
 
+```
 # [component] experiment planning and data pre-processing; setup model configurations; makes data trainable
 python -m monai.apps.nnunet nnUNetV2Runner plan_and_process --input_config "./input.yaml"
+```
 
-## [component] use all available GPU(s) to train a single model
+```
+[component] use all available GPU(s) to train a single model
 python -m monai.apps.nnunet nnUNetV2Runner train_single_model --input_config "./input.yaml" \
     --config "3d_fullres" \
     --fold 0 \
     --trainer_class_name "nnUNetTrainer_5epochs"
+```
 
-# Use all available GPU(s) to train five models under the 3d_fullres configuration
+Use all available GPU(s) to train five models under the 3d_fullres configuration
+```
 python -m monai.apps.nnunet nnUNetV2Runner train_single_model --input_config "./input.yaml" \
     --config "3d_fullres" \
     --trainer_class_name "nnUNetTrainer_2000epochs"
 #The above showed error of input gpu ids
+```
 
-#Below one appeared tp wprl
+Below one appeared to work to only train 3d_fullres for each folder
+```
 for f in 0 1 2 3 4; do
   python -m monai.apps.nnunet nnUNetV2Runner train_single_model \
     --input_config "./input.yaml" \
@@ -30,10 +39,10 @@ for f in 0 1 2 3 4; do
     --fold $f \
     --trainer_class_name "nnUNetTrainer_2000epochs"
 done
+# Add ; before done (or put done on a new line) to avoid shell parsing issues in some terminals:
+```
 
-
-Add ; before done (or put done on a new line) to avoid shell parsing issues in some terminals:
-
+```
 for f in 0 1 2 3 4; do
   python -m monai.apps.nnunet nnUNetV2Runner train_single_model \
     --input_config "./input.yaml" \
@@ -41,8 +50,10 @@ for f in 0 1 2 3 4; do
     --fold $f \
     --trainer_class_name "nnUNetTrainer_2000epochs"
 done
+```
 
-
+```
 ## [component] use all available GPU(s) to train all 20 models (4 configurations, five folders each)
 python -m monai.apps.nnunet nnUNetV2Runner train --input_config "./input.yaml" \
     --trainer_class_name "nnUNetTrainer_20epochs"
+```
