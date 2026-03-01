@@ -50,10 +50,14 @@ Youngs modulus (pa) calculated from time, mass (SI unit: kg), and size. If in mm
 
 Initializing SOFA v25.12 beta version without permanent change sofapython3 paths:
 ```
-SOFA_ROOT=/home/chi/Downloads/SOFA_v25.12.99-full_Linux/SOFA_v25.12.99_Linux \
-PYTHONPATH=/home/chi/Downloads/SOFA_v25.12.99-full_Linux/SOFA_v25.12.99_Linux/plugins/SofaPython3/lib/python3/site-packages:$PYTHONPATH \
-/home/chi/Downloads/SOFA_v25.12.99-full_Linux/SOFA_v25.12.99_Linux/bin/runSofa-25.12.99 -l SofaPython3 -g qglviewer \
-/home/chi/Documents/slicersofa_sofa_scratches/test_roi_select.py
+cd Documents
+```
+
+```
+SOFA_ROOT=./SOFA_v25.12.99-full_Linux/SOFA_v25.12.99_Linux \
+PYTHONPATH=./SOFA_v25.12.99-full_Linux/SOFA_v25.12.99_Linux/plugins/SofaPython3/lib/python3/site-packages:$PYTHONPATH \
+./SOFA_v25.12.99-full_Linux/SOFA_v25.12.99_Linux/bin/runSofa-25.12.99 -l SofaPython3 -g qglviewer \
+./slicersofa_sofa_scratches/test_roi_select.py
 ```
 
 Run on office workstation:\
