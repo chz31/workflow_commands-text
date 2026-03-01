@@ -54,9 +54,9 @@ cd Documents
 ```
 
 ```
-SOFA_ROOT=./SOFA_v25.12.99-full_Linux/SOFA_v25.12.99_Linux \
-PYTHONPATH=./SOFA_v25.12.99-full_Linux/SOFA_v25.12.99_Linux/plugins/SofaPython3/lib/python3/site-packages:$PYTHONPATH \
-./SOFA_v25.12.99-full_Linux/SOFA_v25.12.99_Linux/bin/runSofa-25.12.99 -l SofaPython3 -g qglviewer \
+SOFA_ROOT=/home/chi/Documents/SOFA_v25.12.99-full_Linux/SOFA_v25.12.99_Linux \
+PYTHONPATH=/home/chi/Documents/SOFA_v25.12.99-full_Linux/SOFA_v25.12.99_Linux/plugins/SofaPython3/lib/python3/site-packages:$PYTHONPATH \
+/home/chi/Documents/SOFA_v25.12.99-full_Linux/SOFA_v25.12.99_Linux/bin/runSofa-25.12.99 -l SofaPython3 -g qglviewer \
 ./slicersofa_sofa_scratches/test_roi_select.py
 ```
 
