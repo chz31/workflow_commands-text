@@ -65,7 +65,7 @@ Run on office workstation:\
 SOFA_ROOT=/home/zhang/Downloads/SOFA_v25.12.99-full_Linux/SOFA_v25.12.99_Linux \
 PYTHONPATH=/home/zhang/Downloads/SOFA_v25.12.99-full_Linux/SOFA_v25.12.99_Linux/plugins/SofaPython3/lib/python3/site-packages:$PYTHONPATH \
 /home/zhang/Downloads/SOFA_v25.12.99-full_Linux/SOFA_v25.12.99_Linux/bin/runSofa-25.12.99 -l SofaPython3 -g qglviewer \
-/home/zhang/Documents/slicersofa_sofa_scratches/test_roi_select.py
+/home/zhang/Documents/chi_vs_workspace/slicersofa_sofa_scratches/test_roi_select.py
 ```
 
 
